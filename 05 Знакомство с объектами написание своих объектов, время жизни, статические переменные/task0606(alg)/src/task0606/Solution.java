@@ -29,6 +29,18 @@ public class Solution {
     public static int odd;
 
     public static void main(String[] args) throws IOException {
-        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String value = reader.readLine();
+        if (Integer.parseInt(value) > 0) {
+            for (int i = 0; i < value.length(); i++) {
+                int n = Character.getNumericValue(value.charAt(i));
+                if (n % 2 == 0) {
+                    even++;
+                } else {
+                    odd++;
+                }
+            }
+            System.out.println("Even: " + even + " Odd: " + odd);
+        }
     }
 }

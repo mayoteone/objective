@@ -22,10 +22,19 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum = ;
+        int maximum = Integer.MIN_VALUE;
+        int n = Integer.parseInt(reader.readLine());
+        if (n > 0) {
 
-        //напишите тут ваш код
+            for (int i = 0; i < n; i++) {
+                int m = Integer.parseInt(reader.readLine());
+                if (m > maximum) {
+                    maximum = m;
+                }
 
-        System.out.println(maximum);
+            }
+
+            System.out.println(maximum);
+        }
     }
 }
